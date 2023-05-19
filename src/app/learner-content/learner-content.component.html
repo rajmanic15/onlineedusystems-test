@@ -4,4 +4,10 @@
 <ol><li *ngFor="let item of items">{{ item }}</li></ol>
 <img src='assets/datatypes.png'>
 
-<button (click)="scrollToNext()">Next</button>
+<youtube-player
+      [videoId]="id1"
+      (ready)="savePlayer($event)"
+      (change)="onStateChange($event)"
+      class="video"
+    ></youtube-player>
+

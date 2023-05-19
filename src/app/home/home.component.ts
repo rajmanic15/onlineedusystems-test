@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   public customColors = ['#ccccff', '#ffccb3', '#ccffcc', '#FF9800']; // Add more colors as needed
 
   legendItems = [
-    { label: 'Subject A', color: '#ccccff' },
+    { label: 'C++ Programming', color: '#ccccff' },
     { label: 'Subject B', color: '#ffccb3' },
     { label: 'Subject C', color: '#ccffcc' },
     // Add more items as needed
@@ -57,7 +57,7 @@ export class HomeComponent implements OnInit {
       vservice.init();}
 
   async ngOnInit(): Promise<void> {
-  //  this.speak('Welcome to Online learning Platform. and this is applicable for all learners including those with disablities Which module do you want to land from the below list. 1.Courses and 2.Exams, If you dont want the audio support, feel free to close the popup, start speaking')
+  this.speak('Welcome to Online learning Platform. and this is applicable for all learners including those with disablities Which module do you want to land from the below list. 1.Courses and 2.Exams, If you dont want the audio support, feel free to close the popup, start speaking')
 
     this.vservice.speechInput().subscribe((text:string) => {
         if(text.includes('courses'))

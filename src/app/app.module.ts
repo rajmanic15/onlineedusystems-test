@@ -39,6 +39,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { PopupComponent } from './popup/popup.component';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { NgxYoutubePlayerModule } from 'ngx-youtube-player';
 @NgModule({
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   declarations: [
@@ -77,7 +78,8 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     MatInputModule,
     MatSelectModule,
     MatExpansionModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    NgxYoutubePlayerModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

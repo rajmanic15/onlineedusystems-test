@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-learner-content',
@@ -6,6 +6,17 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./learner-content.component.css']
 })
 export class LearnerContentComponent implements OnInit {
+  player: YT.Player | undefined;
+  public id1: string = 'IxBMVztdlr4';
+
+  savePlayer(player1:any) {
+    this.player = player1;
+    console.log('player instance', player1);
+  }
+  onStateChange(event:any) {
+    console.log('player state', event.data);
+  }
+  constructor(private elementRef: ElementRef) {}
   ngOnInit(): void {
     this.currentIndex = this.subtitles.indexOf(this.subtitle || '');
   }
@@ -33,6 +44,15 @@ export class LearnerContentComponent implements OnInit {
       }
     }
   }
-   
+
+
+  onPlayerReady(event: any) {
+    event.target.playVideo(); // Auto-play the video
+  }
+
+  onPlayerStateChange(event: any) {
+    // Handle player state change events (e.g., play, pause, stop)
+  }
 }
+   
 
