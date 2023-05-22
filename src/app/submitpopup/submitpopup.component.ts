@@ -1,7 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-popup',
+  selector: 'app-submitpopup',
   template: `
     <div class="popup-container" [class.show]="show">
       <div class="popup">
@@ -62,12 +62,14 @@ import { Component, Input } from '@angular/core';
     `,
   ],
 })
-export class PopupComponent {
+export class SubmitpopupComponent {
+
   @Input() title: string = '';
   @Input() show: boolean = false;
   constructor(){
 
   }
+
 
   close() {
     this.show = false;
