@@ -13,7 +13,7 @@ export class ChatGPTservice {
   }
    checkChatGPT(sub:string) {
        let jsonresponse:any;
-    const API_Key = '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'; // Replace with your OpenAI API key
+    const API_Key = ''; // Replace with your OpenAI API key
     const headers = new HttpHeaders({
       Authorization: `Bearer ${API_Key}`,
        'Content-Type': 'application/json'
